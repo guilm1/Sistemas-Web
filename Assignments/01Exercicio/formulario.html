@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <h1>Dados do cadastro</h1>
+
+		<form method="post" action="validar.html">
+			<label for="nome">Nome: </label><br/>
+			<input type="text" name="nome" placeholder="nome do produto" autocomplete="off"><br/><br/>
+
+			<label for="peso">Peso: </label><br/>
+			<input type="text" name="peso" placeholder="Ex: 0.9"><br/><br/>
+
+			<label >Unidade de Medida: </label><br/>
+			<input type="radio" id="quilo" name="unidade" value="kg">
+			<label for="unidade">Quilograma </label><br/>
+			<input type="radio" id="grama" name="unidade" value="g">
+			<label for="unidade">Feminino </label><br/>
+			<input type="radio" id="mili" name="unidade" value="mg">
+			<label for="unidade">Miligrama </label><br/><br/>
+
+      <label for="valor">Valor($): </label>
+			<input type="text" name="valor" placeholder="Ex: 4.00"><br/><br/>
+
+      <label for="estoque">Estoque Inicial: </label>
+			<input type="text" name="estoque" placeholder="Ex: 2"><br/><br/>
+
+			<label for="mercado">Mercado:</label><br/>
+			<input type="checkbox" id="interno" name="mercado[0]">
+			<label for="interno">INTERNO</label><br/>
+			<input type="checkbox" id="externo" name="mercado[1]">
+			<label for="externo">EXTERNO</label>
+      <br><br>
+
+  		<label for="fornecedor">Fornecedor:</label>
+  		<br>
+  		<select name="fornecedor">
+				<option value="0">--- Selecione ---</option>
+				<option value="1">Fornecedor 1</option>
+				<option value="2">Fornecedor 2</option>
+				<option value="3">Fornecedor 3</option>
+				<option value="4">Fornecedor 4</option>
+				<option value="5">Fornecedor 5</option>
+			</select>
+			<br><br>
+
+			<input type="submit" value="Cadastrar">
+			<input type="reset" value="Limpar">
+      <br><br>
+		</form>
+
+    <a href="produtos.html">Sair</a>
+  </body>
+</html>
