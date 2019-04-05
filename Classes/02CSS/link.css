@@ -1,0 +1,27 @@
+a{
+  color:white;
+  text-decoration: none;
+  background-color: blue;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+}
+/*link ainda não foi acessado*/
+a:link{
+background-color: blue;
+text-decoration: none;
+}
+/*link foi acessado*/
+a:visited{
+text-decoration:none;
+background-color: purple;
+}
+/* cursor do mouse está sob o link*/
+a:hover{
+  color:white;
+  text-decoration: underline;
+  background-color: blue;
+}
+/*momento do click*/
+a:active{
+  color: red;
+}
