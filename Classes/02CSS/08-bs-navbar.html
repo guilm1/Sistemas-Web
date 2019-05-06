@@ -4,30 +4,64 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <title>Bootstrap - Navbar</title>
   </head>
   <body>
-    <nav class="nav nav-tabs">
-      <a href="#" class="nav-link active">Home</a>
-      <a href="#" class="nav-link">Cadastro</a>
-      <a href="#" class="nav-link">Relatório</a>
-      <a href="#" class="nav-link">Admin</a>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Usuário</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#"> Perfil</a>
-          <a class="dropdown-item" href="#"> Configurações</a>
-          <a class="dropdown-item" href="#"> Sair</a>
-      </div>
-      </li>
-      <form class="form-inline" action="#" metho="post">
-        <input class="form-control"type="text" name="pesquisa" placeholder="Buscar">
-        <input class="btn btn-info"type="submit" value="Pesquisar">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">Aula</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Cadastro</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sair</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Usuário</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"> Perfil</a>
+              <a class="dropdown-item" href="#"> Configurações</a>
+              <a class="dropdown-item" href="#"> Sair</a>
+          </div>
+          </li>
+        </ul>
+
+      <!-- <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Sair</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Usuário</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#"> Perfil</a>
+            <a class="dropdown-item" href="#"> Configurações</a>
+            <a class="dropdown-item" href="#"> Sair</a>
+        </div>
+        </li>
+      </ul> -->
+
+      <form class="form-inline my-auto" action="#" metho="post">
+        <input class="form-control mr-3"type="text" name="pesquisa" placeholder="Buscar">
+        <input class="btn btn-info my-2"type="submit" value="Pesquisar">
       </form>
+    </div>
     </nav>
 
     <!-- Optional JavaScript -->

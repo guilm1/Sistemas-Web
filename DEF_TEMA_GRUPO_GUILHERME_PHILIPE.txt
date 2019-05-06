@@ -1,0 +1,13 @@
+Grupo: 
+Guilherme Afonso
+Philipe Pereira
+
+Tema provisório:
+Filtragem de ofertas/melhor custo benefício
+de preços de combustível relacionados à distância do cliente.
+
+Escopo inicial:
+- Cadastro de Usuários;
+- Cadastro de colaboradores;
+- Filtragem de ofertas;
+- Calculo de custo/benefício do preço do combustível em relação a distância;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        document.write("Hello, World!");
+    </script>
+
+    <p id="data">Data</p>
+    <p id="nome">Nome</p>
+
+    <button type="button" onclick="exibirDados()">Exibir</button>
+
+    <script>
+      function exibirDados(){
+      document.getElementById("data").innerHTML = Date();
+      HTML=Date();
+      var nome = window.prompt("insira seu nome");
+      document.getElementById("nome").innerHTML=nome;
+      window.alert("Dados Atualizados com sucesso");
+    }
+    </script>
+
+    <script type="text/javascript">
+      console.log("Documento carregado");
+    </script>
+
+  </body>
+</html>
