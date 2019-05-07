@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   <title> Produtos - Cadastro</title>
+  </head>
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand mr-0 mr-md-2" href="#" aria-label="UFOP">
+        <img src="./img/UFOP.png" alt="brand" width="25" height="45" class="d-block"
+        viewBox="0 0 612 612" role="img"focusable="false">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="principal.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://ufop.br/" class="nav-link active">UFOP</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://decsi.ufop.br/cosi" class="nav-link active">COSI</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Clientes
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="cadastroCliente.html"> Cadastrar</a>
+                  <a class="dropdown-item" href="listarCliente.html"> Listar</a>
+              </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Produtos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="cadastro.html"> Cadastrar</a>
+                  <a class="dropdown-item" href="listar.html"> Listar</a>
+              </div>
+              </li>
+            </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <form class="form-inline my-auto" action="#" metho="post">
+            <input class="form-control mr-3"type="text" name="pesquisa" placeholder="Buscar">
+            <input class="btn btn-info my-2"type="submit" value="Pesquisar">
+          </form>
+      </ul>
+    </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid mt-md-5">
+      <div class="container">
+        <h1 class="display-4">Produtos</h1>
+        <h3>Seja bem vindo(a)!</h3>
+        <p class="lead">Cadastre um produto a partir do preenchimento do formulário.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <form name="dados">
+        <h2>Efetue o cadastro de algum Produto!</h2>
+        <div class="jumbotron row bg-light">
+          <div id="grupo1" class="col form-group">
+              <label id="labelNomeProduto" for="nomeProduto">Nome: </label><br>
+              <input class="form-control" type="text" name="nomeProduto" placeholder="nome do produto" autocomplete="off">
+              <div id="alerta1" style="display:none" class="alert alert-danger">
+                <spam>Preencha o campo nome corretamente!<spam>
+              </div>
+          </div>
+        </div>
+
+        <div class="jumbotron row bg-light">
+          <div id="grupo2" class="col-3">
+            <p>
+              <label id="labelUnidadeMedida">Unidade de Medida: </label><br/>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="quilo" name="unidade" value="kg">
+                <label id="labelv1" class="form-check-label" for="unidade">Quilograma </label><br/>
+                <input class="form-check-input" type="radio" id="grama" name="unidade" value="g">
+                <label id="labelv2" class="form-check-label" for="unidade">Grama </label><br/>
+                <input class="form-check-input" type="radio" id="mili" name="unidade" value="mg">
+                <label id="labelv3" class="form-check-label" for="unidade">Miligrama </label><br/><br/>
+              </div>
+              <div id="alerta2" style="display:none" class="alert alert-danger">
+                <spam>Marque uma opção para Unidade de Medida<spam>
+              </div>
+            </p>
+          </div>
+          <div id="grupo3" class="col-5">
+              <div class="form-group">
+                <label id="labelPesoProduto" for="peso">Peso: </label><br/>
+                <input class="form-control form-control-sm" type="text" name="peso" placeholder="Ex: 0.9"><br/><br/>
+                <div id="alerta3" style="display:none" class="alert alert-danger">
+                  <spam>Preencha o campo peso corretamente!<spam>
+                </div>
+              </div>
+          </div>
+          <div id="grupo4" class="col-4">
+              <div class="form-group">
+                <label id="labelValorProduto" for="valor">Valor($): </label><br>
+                <input class="form-control form-control-sm" type="text" name="valor" placeholder="Ex: 4.00"><br/><br/>
+                <div id="alerta4" style="display:none" class="alert alert-danger">
+                  <spam>Preencha o campo valor corretamente!<spam>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div id="ultimo" class="jumbotron row bg-light">
+          <div id="grupo5" class="col-2">
+            <p>
+              <label id="labelMercado" for="mercado">Mercado:</label><br/>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="interno" name="mercado[0]">
+                <label id="label1" class="form-check-label" for="interno">INTERNO</label><br/>
+                <input class="form-check-input" type="checkbox" id="externo" name="mercado[1]">
+                <label id="label2" class="form-check-label" for="externo">EXTERNO</label>
+              </div>
+              <div id="alerta5" style="display:none" class="alert alert-danger">
+                <spam>Marque ao menos uma opção para Mercado<spam>
+              </div>
+            </p>
+          </div>
+          <div id="grupo6" class="col-5">
+            <p>
+              <div class="form-group">
+                <label id="labelEstoqueProduto" for="estoque">Estoque Inicial: </label><br>
+                <input class="form-control form-control-sm" type="text" name="estoque" placeholder="Ex: 2"><br/><br/>
+              </div>
+              <div id="alerta6" style="display:none" class="alert alert-danger">
+                <spam>Preencha o campo Estoque Inicial corretamente!<spam>
+              </div>
+            </p>
+          </div>
+
+          <div id="grupo7" class="col-5">
+            <p>
+              <div class="form-group">
+                <label id="labelFornecedor" for="fornecedor">Fornecedor:</label>
+                <br>
+                <select id="selectValid" class="form-control form-control-sm" name="fornecedor">
+                  <option value="0">--- Selecione ---</option>
+                  <option value="1">Fornecedor 1</option>
+                  <option value="2">Fornecedor 2</option>
+                  <option value="3">Fornecedor 3</option>
+                  <option value="4">Fornecedor 4</option>
+                  <option value="5">Fornecedor 5</option>
+                </select>
+                <div id="alerta7" style="display:none" class="alert alert-danger">
+                  <spam>Marque uma opção para fornecedor<spam>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      <div class="form-group">
+        <button class="form-control btn btn-success" onclick="conferir()" type="button" value="Cadastrar">Cadastrar</button>
+      </div>
+      <br>
+      <button class="form-control btn btn-danger" type="reset" value="Limpar"> Limpar</button><br><br>
+      </form>
+    </div>
+    <script src="form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
