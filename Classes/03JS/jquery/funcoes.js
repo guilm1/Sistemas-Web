@@ -44,4 +44,13 @@ $(document).ready(function (){
       $("#mudar").text("Alternar");
     }
   });
+
+  $("#validar").click(function(){
+    // var est = document.dados.estados;
+    // window.alert(est.value);
+    // window.alert(est.options[est.selectedIndex].text);
+
+    window.alert($("#selectEstado").val());
+    window.alert($("#selectEstado option:selected").text());
+  });
 });
