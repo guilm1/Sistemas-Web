@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="index.html" method="post">
+    <form class="" action="validar.php" method="post">
       <label for="user">Usuário</label>
       <input type="text" name="usuario" value="" id="user"><br /><br/>
 
@@ -19,3 +19,6 @@
 
   </body>
 </html>
+
+
+<!-- php -S localhost // ctrl C -->
