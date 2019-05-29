@@ -12,7 +12,16 @@
 
     }
     echo"</ol>";
-    
+
     ?>
   </body>
 </html>
+
+
+<!-- fazer em forma de tabela -->
+<!-- gerar chaves diferentes para aplicações diferentes php artisan key:generate -->
+
+ <!-- na pasta laravel empty extrair a folder e nomear com nome do projeto que quer
+ dentro da folder iniciar bash com comando php artisan serve  -->
+
+<!-- Trazer template de alguma aplicação  -->
