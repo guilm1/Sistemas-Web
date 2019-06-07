@@ -4,19 +4,36 @@
     <meta charset="utf-8">
     <title>@yield('titulo', 'Sistema Academico')</title>
   </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <body>
     <!-- Links - menu lateral // -->
 
-      <ul>
+
+    <div class="btn btn-light">
+        <a class="btn btn-link" href="/">Home</a>
+    </div>
+    <div class="btn btn-light">
+        <a class="btn btn-link" href="/welcome">About</a>
+    </div>
+    <div class="btn btn-light">
+        <a class="btn btn-link" href="/alunos/listar">Listar</a>
+    </div>
+    <div class="btn btn-light">
+        <a class="btn btn-link" href="/estados">Estados</a>
+    </div>
+{{-- fazer url nomeada com estados index --}}
+
+      {{-- <ul>
         <li><a href="/"> Home</a></li>
         <li><a href="/welcome">About</a></li>
         <li><a href="/alunos/listar">Listar</a></li>
-      </ul>
+        <li><a href="/estados">Estados</a></li>
+      </ul> --}}
 
     <!-- Conteúdo - parte central //-->
     @yield('conteudo')
     <!-- //esse comando gera uma seção -->
 
-    </ol>
   </body>
 </html>
