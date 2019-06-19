@@ -39,8 +39,27 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-      // dd do laravel é similar ao var dump do php 
-        dd($request);
+      // dd do laravel é similar ao var dump do php
+        //dd($request->all());
+       // Validação - check up
+       // Ok?
+       // Gravar
+       //return ($request->nome);
+       //return ($request->input('nome'));
+       // Opção 01:
+       // $estado = new Estado;
+       // $estado->nome = $request->nome;
+       // $estado->sigla = $request->sigla;
+       //
+       // $estado->save();
+       // Opção 02:
+       Estado::create($request->all());
+       // Mensagem de sucesso:
+       // -- Flash
+       // mensagem -> campo
+       session()->flash('mensagem', 'Estado inserido com sucesso!');
+       //return redirect('/estados');
+       return redirect()->route('estados.index');
     }
 
     /**
@@ -51,7 +70,8 @@ class EstadoController extends Controller
      */
     public function show(Estado $estado)
     {
-        //
+        return view('estados.show')
+              ->with('estados',$estado);
     }
 
     /**
@@ -62,7 +82,8 @@ class EstadoController extends Controller
      */
     public function edit(Estado $estado)
     {
-        //
+        return view('estados.edit')
+              ->with('estado', $estado);
     }
 
     /**
@@ -74,7 +95,16 @@ class EstadoController extends Controller
      */
     public function update(Request $request, Estado $estado)
     {
-        //
+        // Opção 01:
+        // $estado->nome = $request->nome
+
+        //Opção 02:
+        $estado->fill($request->all());
+        // Para ambas as opções
+        $estado->save();
+        session()->flash('mensagem','Estado atualizado com sucesso!');
+
+        return redirect()->route('estados.show', $estado->id).;
     }
 
     /**
@@ -85,6 +115,11 @@ class EstadoController extends Controller
      */
     public function destroy(Estado $estado)
     {
-        //
+        //Validações
+        // -- chave estrangeira
+        //Ecluir o estado
+        $estado->delete();
+        session()->flash('mensagem', 'Estado excluído com sucesso!');
+        return redirect()->route('estados.index');
     }
 }
