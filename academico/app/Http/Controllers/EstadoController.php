@@ -104,7 +104,7 @@ class EstadoController extends Controller
         $estado->save();
         session()->flash('mensagem','Estado atualizado com sucesso!');
 
-        return redirect()->route('estados.show', $estado->id).;
+        return redirect()->route('estados.show', $estado->id);
     }
 
     /**
