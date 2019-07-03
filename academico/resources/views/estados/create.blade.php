@@ -1,6 +1,6 @@
 @extends('principal')
 
-@section('titulo', 'Estados')
+@section('titulo', 'Inserir Estados')
 
 @section('conteudo')
 

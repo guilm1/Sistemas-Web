@@ -12,16 +12,17 @@
     <caption>Estados</caption>
     <thead class="thead-dark">
       <tr>
+        <th>Codigo</th>
         <th>Nome</th>
         <th>Sigla</th>
-        <th>ID</th>
+        <th>Visualizar</th>
       </tr>
     </thead>
     <tbody>
   @foreach($estados as $e)
     <tr>
       <td>{{$e->id}}</td>
-      <td>{{$e->nome}}</td>
+      <td><a href="{{ route('estados.show', $e->id) }}">{{ $e->nome }}</a></td>
       <td>{{$e->sigla}}</td>
       <td><a href="{{route('estados.show', $e->id)}}"> Exibir </a></td>
     </tr>

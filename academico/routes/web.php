@@ -14,3 +14,7 @@ Route::get('/', 'PaginasController@index');
 Route::get('/welcome','PaginasController@about');
 Route::get('/alunos/listar', 'PaginasController@listar');
 Route::resource('/estados','EstadoController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

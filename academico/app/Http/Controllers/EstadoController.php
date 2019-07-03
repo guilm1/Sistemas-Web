@@ -71,7 +71,7 @@ class EstadoController extends Controller
     public function show(Estado $estado)
     {
         return view('estados.show')
-              ->with('estados',$estado);
+              ->with('estado',$estado);
     }
 
     /**
