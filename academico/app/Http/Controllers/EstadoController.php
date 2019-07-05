@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Estado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EstadoController extends Controller
 {
@@ -17,15 +18,17 @@ class EstadoController extends Controller
      // CHAMA LOGIN ANTES QUANDO CRIA ESTADO
      // senha 1 ate 8
      // para ter acesso a estados deve logar
-     public function __construct()
-     {
-       $this->middleware('auth');
-     }
+     // public function __construct()
+     // {
+     //   $this->middleware('auth',
+     //  [ 'except' => ['index'] ]);
+     // }
+
 
     public function index()
     {
-        // Modelo -> recuperação dos dados
-        $estados = Estado::all();
+        // Model -> recuperação dos dados
+        $estados = Estado::orderBy('nome')->get();
         // View -> aprensentar
         return view('estados.index')
                     -> with('estados', $estados);
@@ -38,7 +41,13 @@ class EstadoController extends Controller
      */
     public function create()
     {
-        return view('estados.create');
+        if (Auth::check()){
+          //if(Auth::user()->type == 1){
+          //Auth::logout(); //Desloga o usário do sistema
+          return view('estados.create');
+        }else{
+          return redirect()->route('login');
+        }
     }
 
     /**
