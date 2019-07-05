@@ -11,7 +11,17 @@ class EstadoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+
      */
+
+     // CHAMA LOGIN ANTES QUANDO CRIA ESTADO
+     // senha 1 ate 8
+     // para ter acesso a estados deve logar
+     public function __construct()
+     {
+       $this->middleware('auth');
+     }
+
     public function index()
     {
         // Modelo -> recuperação dos dados

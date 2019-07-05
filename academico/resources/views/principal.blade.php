@@ -22,6 +22,7 @@
     <div class="btn btn-light">
         <a class="btn btn-link" href="/estados">Estados</a>
     </div>
+
 {{-- fazer url nomeada com estados index --}}
 
       {{-- <ul>
