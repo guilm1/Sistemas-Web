@@ -18,11 +18,11 @@ class EstadoController extends Controller
      // CHAMA LOGIN ANTES QUANDO CRIA ESTADO
      // senha 1 ate 8
      // para ter acesso a estados deve logar
-     // public function __construct()
-     // {
-     //   $this->middleware('auth',
-     //  [ 'except' => ['index'] ]);
-     // }
+     public function __construct()
+     {
+       $this->middleware('auth',
+      [ 'except' => ['index'] ]);
+     }
 
 
     public function index()
